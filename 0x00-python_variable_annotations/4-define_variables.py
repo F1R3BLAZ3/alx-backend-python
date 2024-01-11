@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
+"""
+Module Description: Variables Assignment
 
-# Variable 'a' of type int with value 1
+This module assigns values to variables with type annotations.
+
+Variables:
+- a (int): An integer variable with the value 1.
+- pi (float): A float variable with the value 3.14.
+- i_understand_annotations (bool): A boolean variable with the value True.
+- school (str): A string variable with the value "Holberton".
+"""
+
 a: int = 1
-
-# Variable 'pi' of type float with value 3.14
 pi: float = 3.14
-
-# Variable 'i_understand_annotations' of type bool with value True
 i_understand_annotations: bool = True
-
-# Variable 'school' of type str with value "Holberton"
 school: str = "Holberton"
