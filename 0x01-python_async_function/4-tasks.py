@@ -20,7 +20,8 @@ async def task_wait_random(max_delay: int) -> asyncio.Task:
 
 async def task_wait_n(n: int, max_delay: int = 10) -> List[float]:
     """
-    Asynchronous routine that spawns task_wait_random n times with the specified max_delay.
+    Asynchronous routine that spawns task_wait_random n times
+    with the specified max_delay.
     Returns a list of all the delays in ascending order.
     """
     delays = []
