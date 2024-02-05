@@ -4,7 +4,6 @@ import unittest
 from unittest.mock import patch, Mock
 from parameterized import parameterized
 from utils import access_nested_map, get_json
-from typing import Dict, Tuple
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -23,7 +22,7 @@ class TestAccessNestedMap(unittest.TestCase):
         Parameters:
         - nested_map (dict): The nested dictionary to be accessed.
         - path (tuple): The path to the nested value.
-        - expected_result: The expected result after accessing the nested value
+        - expected_result: The expected result after accessing the nested value.
         """
         self.assertEqual(access_nested_map(nested_map, path), expected_result)
 
@@ -32,12 +31,15 @@ class TestAccessNestedMap(unittest.TestCase):
         ({"a": 1}, ("a", "b"), KeyError),
     ])
     def test_access_nested_map_exception(
-            self,
-            nested_map: Dict,
-            path: Tuple[str],
-            expected_exception: Exception,
-    ) -> None:
-        """Tests `access_nested_map`'s exception raising."""
+            self, nested_map, path, expected_exception):
+        """
+        Tests `access_nested_map`'s exception raising.
+
+        Parameters:
+        - nested_map (dict): The nested dictionary to be accessed.
+        - path (tuple): The path to the nested value.
+        - expected_exception: The expected exception when the path is not found.
+        """
         with self.assertRaises(expected_exception):
             access_nested_map(nested_map, path)
 
