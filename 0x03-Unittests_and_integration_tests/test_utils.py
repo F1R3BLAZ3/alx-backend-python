@@ -22,7 +22,7 @@ class TestAccessNestedMap(unittest.TestCase):
         Parameters:
         - nested_map (dict): The nested dictionary to be accessed.
         - path (tuple): The path to the nested value.
-        - expected_result: The expected result after accessing the nested value.
+        - expected_result: The expected result after accessing the nested value
         """
         self.assertEqual(access_nested_map(nested_map, path), expected_result)
 
@@ -38,7 +38,7 @@ class TestAccessNestedMap(unittest.TestCase):
         Parameters:
         - nested_map (dict): The nested dictionary to be accessed.
         - path (tuple): The path to the nested value.
-        - expected_exception: The expected exception when the path is not found.
+        - expected_exception: The expected exception when the path is not found
         """
         with self.assertRaises(expected_exception):
             access_nested_map(nested_map, path)
